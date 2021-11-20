@@ -1,0 +1,19 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+            authentication {
+                basic(BasicAuthentication)
+            }
+            credentials {
+                username = "mapbox"
+                password = 'sk.eyJ1IjoiZ2FsYWN0aWN0cmF2ZWwiLCJhIjoiY2toeGN1N3F4MDJjeDJ3bGI4MG9sdGYzbyJ9.uED9t7n0fE2yoa5-jkwv1w'
+            }
+        }
+    }
+}
+rootProject.name = "Mapbox_medium_project"
+include ':app'
